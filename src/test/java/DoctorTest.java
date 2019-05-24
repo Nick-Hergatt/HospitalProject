@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class DoctorTest {
-	Doctor underTest = new Doctor(null, null, 0, null, 0);
+	Doctor underTest = new Doctor(null, null, 0, null);
 	@Test
 	public void doctorsShouldExist() {
 		String name = underTest.getFirstName("John");
@@ -34,9 +34,10 @@ public class DoctorTest {
 		assertThat(name, is("John"));
 		assertThat(specialty, is("Pediatrician"));
 	}
+	
 	@Test
-	public void doctorShouldHaveAPatient() {
-		int numOfPatient = underTest.getPatients();
-		assertThat(numOfPatient, is(0));
-	}
+	public void DoctorShouldDrawBlood() {
+		int bloodDraw = underTest.getDrawBlood();
+		assertEquals(0,bloodDraw);
+}
 }

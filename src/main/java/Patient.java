@@ -26,4 +26,21 @@ public class Patient {
 		return healthLevel;
 	}
 
+	public void caredForByNurse() {
+		this.healthLevel ++;	
+	}
+	public void caredForByDoctor() {
+		this.healthLevel += 2;	
+	}
+
+	public void bloodDrawByNurse() {
+		this.bloodLevel -= 1;
+		
+	}
+
+	public void bloodDrawByDoctor() {
+		this.bloodLevel -= 2;
+		
+	}
+
 }

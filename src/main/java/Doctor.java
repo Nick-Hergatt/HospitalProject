@@ -1,11 +1,14 @@
 
 public class Doctor extends MedicalEmployees {
-	public Doctor(String employeeNum, String firstName, int payRate, String specialty, int patients) {
-		this.firstName = firstName;
-		this.payRate = payRate;
+	public Doctor(String employeeNum, String firstName, int payRate, String specialty) {
+		this.payRate = 90000;
 		this.specialty = specialty;
-		this.employeeNum = employeeNum;
+
 	}
+	public String getSpecialty(String specialty) {
+		return specialty;
+	}
+
 
 
 

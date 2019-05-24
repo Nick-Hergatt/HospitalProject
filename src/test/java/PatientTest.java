@@ -31,5 +31,33 @@ public class PatientTest {
 		int checkHealthLevel = underTest.getHealthLevel();
 		assertEquals(10, checkHealthLevel);
 	}
+	@Test
+	public void paitentHealthLevelPlus1AfterCareFromNurse() {
+		Patient underTest = new Patient("");
+		underTest.caredForByNurse();
+		int checkHealthLevelAfter = underTest.getHealthLevel();
+		assertEquals(11, checkHealthLevelAfter);
+	}
+	@Test
+	public void paitentHealthLevelPlus2AfterCareFromDoctor() {
+		Patient underTest = new Patient("");
+		underTest.caredForByDoctor();
+		int checkHealthLevelAfter = underTest.getHealthLevel();
+		assertEquals(12, checkHealthLevelAfter);
+	}
+	@Test
+	public void paitentBloodLevelPlus1AfterCareFromNurse() {
+		Patient underTest = new Patient("");
+		underTest.bloodDrawByNurse();
+		int checkHealthLevelAfter = underTest.getBloodLevel();
+		assertEquals(19, checkHealthLevelAfter);
+	}
+	@Test
+	public void paitentBloodLevelPlus2AfterCareFromDoctor() {
+		Patient underTest = new Patient("");
+		underTest.bloodDrawByDoctor();
+		int checkHealthLevelAfter = underTest.getBloodLevel();
+		assertEquals(18, checkHealthLevelAfter);
+	}
 	
 }
