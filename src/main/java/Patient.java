@@ -11,22 +11,18 @@ public class Patient {
 	}
 
 	public String getPaitent() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public String getFirstName() {
-	
 		return firstName;
 	}
 
 	public int getBloodLevel() {
-		// TODO Auto-generated method stub
 		return bloodLevel;
 	}
 
 	public int getHealthLevel() {
-		// TODO Auto-generated method stub
 		return healthLevel;
 	}
 
