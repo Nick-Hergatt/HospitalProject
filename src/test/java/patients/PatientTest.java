@@ -1,9 +1,12 @@
+package patients;
 
 
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import patients.Patient;
 
 public class PatientTest {
 

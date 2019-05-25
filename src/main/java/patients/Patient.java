@@ -1,3 +1,4 @@
+package patients;
 
 public class Patient {
 	private String firstName;

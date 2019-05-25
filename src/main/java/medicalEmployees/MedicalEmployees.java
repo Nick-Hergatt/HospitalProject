@@ -1,3 +1,5 @@
+package medicalEmployees;
+import models.HospitalEmployee;
 
 public abstract class MedicalEmployees extends HospitalEmployee {
 
@@ -12,7 +14,7 @@ public abstract class MedicalEmployees extends HospitalEmployee {
 	}
 
 	public int getDrawBlood() {
-		// TODO Auto-generated method stub
+
 		return 0;
 	}
 	

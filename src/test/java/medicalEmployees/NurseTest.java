@@ -1,23 +1,26 @@
+package medicalEmployees;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import medicalEmployees.Nurse;
+
 public class NurseTest {
-	Nurse underTest = new Nurse(null, null, 0, 0);
+	Nurse underTest = new Nurse(0);
 
 	@Test
 	public void NurseShouldExist() {
-		String name = underTest.getFirstName("John");
-		assertThat(name, is("John"));
+		String name = underTest.getFirstName();
+		assertThat(name, is("Jack"));
 
 	}
 
 	@Test
 	public void NurseShouldHavePayRate() {
-		int payRate = underTest.getPayRate();
-		assertEquals(50000, payRate);
+		String payRate = underTest.getPayRate();
+		assertEquals("50000", payRate);
 	}
 
 	@Test

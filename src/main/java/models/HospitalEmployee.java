@@ -1,19 +1,20 @@
+package models;
 
 public abstract class HospitalEmployee {
 
 	protected String firstName;
-	protected int payRate;
+	protected String payRate;
 	protected String employeeNum;
 
 	public HospitalEmployee() {
 		super();
 	}
 
-	public String getFirstName(String firstName) {
+	public String getFirstName() {
 		return firstName;
 	}
 
-	public int getPayRate() {
+	public String getPayRate() {
 		return payRate;
 	}
 	public String getEmployeeNum() {
