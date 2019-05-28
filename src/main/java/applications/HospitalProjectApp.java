@@ -1,3 +1,4 @@
+package applications;
 
 public class HospitalProjectApp {
 

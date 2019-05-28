@@ -1,4 +1,4 @@
-
+package supportStaff;
 public class Janitor extends SupportStaff {
 	
 	boolean isSweeping;

@@ -1,3 +1,4 @@
+package supportStaff;
 
 public class Receptionist extends SupportStaff {
 
