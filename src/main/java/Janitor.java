@@ -1,16 +1,22 @@
 
 public class Janitor extends SupportStaff {
 	
-	Boolean isSweeping;
+	boolean isSweeping;
 
-	public Janitor(String employeeNum, String firstName, int payRate, boolean isSweeping) {
-	this.isSweeping = isSweeping;
+
 	
+	public Janitor(String firstName, int payRate, String employeeNum, boolean hasBeenPayed, boolean isSweeping) {
+		super(firstName, payRate, employeeNum, hasBeenPayed);
+		this.isSweeping = isSweeping;
 	}
 	public boolean getSweeping() {
 		
 		
 		return isSweeping;
+	}
+	@Override
+	public int getPayRate() {
+		return 40000;
 	}
 
 }
