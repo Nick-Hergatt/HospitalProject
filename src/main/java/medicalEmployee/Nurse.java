@@ -1,3 +1,4 @@
+package medicalEmployee;
 
 public class Nurse extends MedicalEmployees {
 	int patients;

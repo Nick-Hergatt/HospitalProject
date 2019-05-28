@@ -1,3 +1,5 @@
+package medicalEmployee;
+import models.HospitalEmployee;
 
 public abstract class MedicalEmployees extends HospitalEmployee {
 

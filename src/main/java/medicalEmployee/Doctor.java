@@ -1,3 +1,4 @@
+package medicalEmployee;
 
 public class Doctor extends MedicalEmployees {
 	String specialty;
