@@ -1,18 +1,20 @@
 
 public class Doctor extends MedicalEmployees {
 	String specialty;
-	
-	public Doctor(String employeeNum, String firstName, int payRate, String specialty, int patients) {
-		this.firstName = firstName;
-		this.payRate = payRate;
+
+
+	public Doctor(String firstName, int payRate, String employeeNum, boolean hasBeenPayed, String specialty) {
+		super(firstName, payRate, employeeNum, hasBeenPayed);
 		this.specialty = specialty;
-		this.employeeNum = employeeNum;
 	}
 
-	
-	
+	@Override
+	public int getPayRate() {
+		return 90000;
 	}
 
+	public String getSpecialty(String specialty) {
+		return specialty;
+	}
 
-
-
+}

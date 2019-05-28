@@ -1,20 +1,29 @@
 
-public class HospitalEmployee {
+public abstract class HospitalEmployee {
 
 	protected String firstName;
-	protected int payRate = 90000;
+	protected int payRate;
 	protected String employeeNum;
+	protected boolean hasBeenPayed;
 
-	public HospitalEmployee() {
-		super();
+
+	public HospitalEmployee(String firstName, int payRate, String employeeNum, boolean hasBeenPayed) {
+		this.firstName = firstName;
+		this.payRate = payRate;
+		this.employeeNum = employeeNum;
+		this.hasBeenPayed = hasBeenPayed;
 	}
 
 	public String getFirstName(String firstName) {
 		return firstName;
 	}
 
-	public int getPayRate() {
-		return payRate;
-	}
+	public abstract int getPayRate();
 
+	public void payEmployee() {
+		hasBeenPayed = true;
+	}
+	public boolean getHasBeenPayed() {
+		return hasBeenPayed;
+	}
 }
