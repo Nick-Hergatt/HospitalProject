@@ -26,4 +26,27 @@ public class Patient {
 		return healthLevel;
 	}
 
+	public void DcDrawBlood() {
+		this.bloodLevel -= 2;
+		
+		
+	}
+
+	public void RnDrawBlood() {
+		this.bloodLevel -= 1;
+		
+		
+	}
+
+	public void DcCare() {
+		this.healthLevel += 2;
+		
+		
+	}
+
+	public void RnCare() {
+		this.healthLevel += 1;
+		
+	}
+
 }

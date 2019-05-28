@@ -31,5 +31,37 @@ public class PatientTest {
 		int checkHealthLevel = underTest.getHealthLevel();
 		assertEquals(10, checkHealthLevel);
 	}
+	@Test
+	public void patientBloodLevelSHouldchangeBy2whenDrawnByDoctor() {
+		Patient underTest = new Patient("");
+		int preDrawBlood = underTest.getBloodLevel();
+		underTest.DcDrawBlood();
+		int checkBloodLevel = underTest.getBloodLevel();
+		//System.out.println(preDrawBlood);
+		assertEquals(18, checkBloodLevel);
+	}
+	@Test
+	public void patientBloodLevelSHouldchangeBy2WhenDrawnByNurse() {
+		Patient underTest = new Patient("");
+		int preDrawBlood = underTest.getBloodLevel();
+		underTest.RnDrawBlood();
+		int checkBloodLevel = underTest.getBloodLevel();
+		//System.out.println(preDrawBlood);
+		assertEquals(19, checkBloodLevel);
+	}
+	@Test
+	public void patientHealthLevelShouldIncreaseBy2WhenDoneByDoctor() {
+		Patient underTest = new Patient("");
+		underTest.DcCare();
+		int checkHealthLevel = underTest.getHealthLevel();
+		assertEquals(12, checkHealthLevel);	
+	}
+	@Test
+	public void patientHealthLevelShouldIncreaseBy2WhenDoneByNurse() {
+		Patient underTest = new Patient("");
+		underTest.RnCare();
+		int checkHealthLevel = underTest.getHealthLevel();
+		assertEquals(11, checkHealthLevel);	
+	}
 	
 }

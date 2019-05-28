@@ -1,21 +1,9 @@
 
-public abstract class MedicalEmployees extends Employee {
+public abstract class MedicalEmployees extends HospitalEmployee {
 
-	protected String firstName;
-	protected int payRate = 90000;
-	protected String specialty;
 	protected int patients;
-	protected String employeeNum;
 	public MedicalEmployees() {
 		super();
-	}
-
-	public String getFirstName(String firstName) {
-		return firstName;
-	}
-
-	public int getPayRate() {
-		return payRate;
 	}
 
 	public int careForPatient() {

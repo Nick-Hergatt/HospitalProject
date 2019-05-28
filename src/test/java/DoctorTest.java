@@ -39,4 +39,5 @@ public class DoctorTest {
 		int numOfPatient = underTest.getPatients();
 		assertThat(numOfPatient, is(0));
 	}
+	
 }
