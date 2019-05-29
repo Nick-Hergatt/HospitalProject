@@ -15,7 +15,7 @@ public abstract class HospitalEmployee {
 		this.hasBeenPayed = hasBeenPayed;
 	}
 
-	public String getFirstName(String firstName) {
+	public String getFirstName() {
 		return firstName;
 	}
 
@@ -27,4 +27,5 @@ public abstract class HospitalEmployee {
 	public boolean getHasBeenPayed() {
 		return hasBeenPayed;
 	}
+	public abstract void payOutSalary();
 }

@@ -20,4 +20,16 @@ public class Receptionist extends SupportStaff {
 		return isOnThePhone;
 	}
 
+	@Override
+	public void payOutSalary() {
+		if(hasBeenPayed == false) {;
+		System.out.println("Receptionist " + firstName + " has been paid " + getPayRate());
+		payEmployee();
+		}
+		else if(hasBeenPayed == true) {
+		System.out.println("Receptionist " + firstName + " had already been paid");
+		}
+		
+	}
+
 }

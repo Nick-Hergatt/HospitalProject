@@ -18,5 +18,16 @@ public class Janitor extends SupportStaff {
 	public int getPayRate() {
 		return 40000;
 	}
+	@Override
+	public void payOutSalary() {
+		if(hasBeenPayed == false) {;
+		System.out.println("Janitor " + firstName + " has been paid " + getPayRate());
+		payEmployee();
+		}
+		else if(hasBeenPayed == true) {
+		System.out.println("Janitor " + firstName + " had already been paid");
+		}
+		
+	}
 
 }

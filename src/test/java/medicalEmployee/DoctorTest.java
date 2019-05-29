@@ -41,5 +41,26 @@ public class DoctorTest {
 		assertThat(payTest, is(true));
 		
 	}
-
+	@Test
+	public void DoctorJohnPaidStatusShouldChangeAfterPayOutMethod(){
+		Doctor underTest = new Doctor("John", 0, null, false, null);
+		boolean payTest = underTest.getHasBeenPayed();
+		underTest.payOutSalary();
+		boolean payTest1 = underTest.getHasBeenPayed();
+		assertThat(payTest, is(false));
+		assertThat(payTest1,is(true));
+		
+	}
+	@Test
+	public void DoctorTimPaidStatusShouldReturnAlreadyPaidMessage(){
+		Doctor underTest = new Doctor("John", 0, null, true, null);
+		boolean payTest = underTest.getHasBeenPayed();
+		underTest.payOutSalary();
+		assertThat(payTest,is(true));
+		
+	}
+	
+	
+	
+	
 }

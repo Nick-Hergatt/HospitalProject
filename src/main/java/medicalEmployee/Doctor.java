@@ -18,4 +18,16 @@ public class Doctor extends MedicalEmployees {
 		return specialty;
 	}
 
+	@Override
+	public void payOutSalary() {
+		if(hasBeenPayed == false) {;
+		System.out.println("Doctor " + firstName + " has been paid " + getPayRate());
+		payEmployee();
+		}
+		else if(hasBeenPayed == true) {
+		System.out.println("Docter " + firstName + " had already been paid");
+		}
+		
+	}
+
 }
