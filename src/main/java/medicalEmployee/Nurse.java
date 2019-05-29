@@ -18,4 +18,10 @@ public class Nurse extends MedicalEmployees {
 		return 0;
 	}
 
+	@Override
+	public void payOutSalary() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
