@@ -10,7 +10,8 @@ public class NurseTest {
 
 	@Test
 	public void nursesShouldExist() {
-		String name = underTest.getFirstName("John");
+		Nurse underTest = new Nurse("John", 0, null, false, 0);
+		String name = underTest.getFirstName();
 		assertThat(name, is("John"));
 
 	}

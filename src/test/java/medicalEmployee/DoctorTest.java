@@ -10,7 +10,8 @@ public class DoctorTest {
 
 	@Test
 	public void doctorsShouldExist() {
-		String name = underTest.getFirstName("John");
+		Doctor underTest = new Doctor("John", 0, null, false, null);
+		String name = underTest.getFirstName();
 		assertThat(name, is("John"));
 
 	}
@@ -29,7 +30,8 @@ public class DoctorTest {
 
 	@Test
 	public void doctorJohnShouldBeAPediatrician() {
-		String name = underTest.getFirstName("John");
+		Doctor underTest = new Doctor("John", 0, null, false, null);
+		String name = underTest.getFirstName();
 		String specialty = underTest.getSpecialty("Pediatrician");
 		assertThat(name, is("John"));
 		assertThat(specialty, is("Pediatrician"));
