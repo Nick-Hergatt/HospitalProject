@@ -3,8 +3,8 @@ import models.HospitalEmployee;
 
 public abstract class SupportStaff extends HospitalEmployee {
 
-	public SupportStaff(String firstName, int payRate, String employeeNum, boolean hasBeenPayed) {
-		super(firstName, payRate, employeeNum, hasBeenPayed);
+	public SupportStaff(String firstName,  String employeeNum, boolean hasBeenPayed) {
+		super(firstName, employeeNum, hasBeenPayed);
 	}
 
 

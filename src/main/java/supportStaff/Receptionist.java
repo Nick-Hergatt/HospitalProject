@@ -6,9 +6,10 @@ public class Receptionist extends SupportStaff {
 
 
 
-	public Receptionist(String firstName, int payRate, String employeeNum, boolean hasBeenPayed, boolean isOnThePhone) {
-		super(firstName, payRate, employeeNum, hasBeenPayed);
+	public Receptionist(String firstName, String employeeNum, boolean hasBeenPayed, boolean isOnThePhone) {
+		super(firstName, employeeNum, hasBeenPayed);
 		this.isOnThePhone = isOnThePhone;
+		makePayRate();
 	}
 
 	@Override
@@ -22,6 +23,7 @@ public class Receptionist extends SupportStaff {
 
 	@Override
 	public void payOutSalary() {
+		makePayRate();
 		if(hasBeenPayed == false) {;
 		System.out.println("Receptionist " + firstName + " has been paid " + getPayRate());
 		payEmployee();

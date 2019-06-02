@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import patient.Patient;
+import supportStaff.Janitor;
 
 public class PatientsRegister {
 
@@ -48,4 +49,34 @@ public class PatientsRegister {
 		Patient patient = patients.get(firstName);
 		patient.RnCare();
 	}
+	public boolean isAPatient(String firstName) {
+		if (patients.containsKey(firstName))
+			return true;
+		return false;
+	}
+	public void patientStats() {
+		System.out.println(makeNCharacterStringWithDashes("-", 79));
+		System.out.printf("\n%1$-20s %2$10s %3$15s", "Name", "Health lvl", "Blood lvl");
+		for (Patient patient : patients.values()) {
+				System.out.printf("\n%1$-20s %2$10d %3$15s \n", patient.getFirstName(), patient.getHealthLevel(), patient.getBloodLevel());
+			}
+	}
+
+	public String makeNCharacterStringWithDashes(String inputString, int length) {
+        if (inputString.equals("-1")) {
+            inputString = "";
+        }
+        if (inputString.length() > length) {
+            inputString = inputString.substring(0, length);
+        }
+        while (inputString.length() < length) {
+            if (inputString.length() % 2 == 0) {
+                inputString = inputString + "-";
+            } else {
+                inputString = "-" + inputString;
+            }
+        }
+        return inputString;
+    }
+	
 }

@@ -6,11 +6,11 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class NurseTest {
-	Nurse underTest = new Nurse(null, 0, null, false, 0);
+	Nurse underTest = new Nurse(null, null, false, 0);
 
 	@Test
 	public void nursesShouldExist() {
-		Nurse underTest = new Nurse("John", 0, null, false, 0);
+		Nurse underTest = new Nurse("John", null, false, 0);
 		String name = underTest.getFirstName();
 		assertThat(name, is("John"));
 
@@ -18,6 +18,7 @@ public class NurseTest {
 
 	@Test
 	public void nursesShouldHavePayRate() {
+		underTest.makePayRate();
 		int payRate = underTest.getPayRate();
 		assertEquals(50000, payRate);
 	}
