@@ -13,7 +13,7 @@ public class Receptionist extends SupportStaff {
 
 	@Override
 	public int getPayRate() {
-		return 45000;
+		return payRate;
 	}
 
 	public boolean getIsOnThePhone() {
@@ -29,6 +29,12 @@ public class Receptionist extends SupportStaff {
 		else if(hasBeenPayed == true) {
 		System.out.println("Receptionist " + firstName + " had already been paid");
 		}
+		
+	}
+
+	@Override
+	public void makePayRate() {
+		payRate = 45000;
 		
 	}
 

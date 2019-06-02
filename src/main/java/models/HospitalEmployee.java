@@ -24,8 +24,16 @@ public abstract class HospitalEmployee {
 	public void payEmployee() {
 		hasBeenPayed = true;
 	}
+	
 	public boolean getHasBeenPayed() {
 		return hasBeenPayed;
 	}
+	
 	public abstract void payOutSalary();
+	
+	public abstract void makePayRate();
+	
+	public String getEmployeeNum() {
+		return employeeNum;
+	}
 }

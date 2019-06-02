@@ -16,7 +16,7 @@ public class Janitor extends SupportStaff {
 	}
 	@Override
 	public int getPayRate() {
-		return 40000;
+		return payRate;
 	}
 	@Override
 	public void payOutSalary() {
@@ -27,6 +27,11 @@ public class Janitor extends SupportStaff {
 		else if(hasBeenPayed == true) {
 		System.out.println("Janitor " + firstName + " had already been paid");
 		}
+		
+	}
+	@Override
+	public void makePayRate() {
+		payRate = 40000;
 		
 	}
 

@@ -11,10 +11,10 @@ public class Doctor extends MedicalEmployees {
 
 	@Override
 	public int getPayRate() {
-		return 90000;
+		return payRate;
 	}
 
-	public String getSpecialty(String specialty) {
+	public String getSpecialty() {
 		return specialty;
 	}
 
@@ -27,6 +27,12 @@ public class Doctor extends MedicalEmployees {
 		else if(hasBeenPayed == true) {
 		System.out.println("Docter " + firstName + " had already been paid");
 		}
+		
+	}
+
+	@Override
+	public void makePayRate() {
+		payRate = 90000;
 		
 	}
 

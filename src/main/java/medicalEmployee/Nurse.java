@@ -11,16 +11,28 @@ public class Nurse extends MedicalEmployees {
 
 	@Override
 	public int getPayRate() {
-		return 50000;
+		return payRate;
 	}
 
 	public int getPatients() {
-		return 0;
+		return patients;
 	}
 
 	@Override
 	public void payOutSalary() {
-		// TODO Auto-generated method stub
+		if(hasBeenPayed == false) {;
+		System.out.println("Nurse " + firstName + " has been paid " + getPayRate());
+		payEmployee();
+		}
+		else if(hasBeenPayed == true) {
+		System.out.println("Nurse " + firstName + " had already been paid");
+		}
+		
+	}
+
+	@Override
+	public void makePayRate() {
+		payRate = 50000;
 		
 	}
 
