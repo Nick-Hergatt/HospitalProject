@@ -6,11 +6,11 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class DoctorTest {
-	Doctor underTest = new Doctor(null, 0, null, false, null);
+	Doctor underTest = new Doctor(null, null, false, null);
 
 	@Test
 	public void doctorsShouldExist() {
-		Doctor underTest = new Doctor("John", 0, null, false, null);
+		Doctor underTest = new Doctor("John", null, false, null);
 		String name = underTest.getFirstName();
 		assertThat(name, is("John"));
 
@@ -18,21 +18,22 @@ public class DoctorTest {
 
 	@Test
 	public void doctorsShouldHavePayRate() {
+		underTest.makePayRate();
 		int payRate = underTest.getPayRate();
 		assertEquals(90000, payRate);
 	}
 
 	@Test
 	public void doctorShouldHaveSpecialty() {
-		String speciality = underTest.getSpecialty("");
-		assertEquals("", speciality);
+		String speciality = underTest.getSpecialty();
+		assertEquals(null, speciality);
 	}
 
 	@Test
 	public void doctorJohnShouldBeAPediatrician() {
-		Doctor underTest = new Doctor("John", 0, null, false, null);
+		Doctor underTest = new Doctor("John", null, false, "Pediatrician");
 		String name = underTest.getFirstName();
-		String specialty = underTest.getSpecialty("Pediatrician");
+		String specialty = underTest.getSpecialty();
 		assertThat(name, is("John"));
 		assertThat(specialty, is("Pediatrician"));
 	}
@@ -45,7 +46,7 @@ public class DoctorTest {
 	}
 	@Test
 	public void DoctorJohnPaidStatusShouldChangeAfterPayOutMethod(){
-		Doctor underTest = new Doctor("John", 0, null, false, null);
+		Doctor underTest = new Doctor("John", null, false, null);
 		boolean payTest = underTest.getHasBeenPayed();
 		underTest.payOutSalary();
 		boolean payTest1 = underTest.getHasBeenPayed();
@@ -55,7 +56,7 @@ public class DoctorTest {
 	}
 	@Test
 	public void DoctorTimPaidStatusShouldReturnAlreadyPaidMessage(){
-		Doctor underTest = new Doctor("John", 0, null, true, null);
+		Doctor underTest = new Doctor("John", null, true, null);
 		boolean payTest = underTest.getHasBeenPayed();
 		underTest.payOutSalary();
 		assertThat(payTest,is(true));

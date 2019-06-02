@@ -8,9 +8,8 @@ public abstract class HospitalEmployee {
 	protected boolean hasBeenPayed;
 
 
-	public HospitalEmployee(String firstName, int payRate, String employeeNum, boolean hasBeenPayed) {
+	public HospitalEmployee(String firstName, String employeeNum, boolean hasBeenPayed) {
 		this.firstName = firstName;
-		this.payRate = payRate;
 		this.employeeNum = employeeNum;
 		this.hasBeenPayed = hasBeenPayed;
 	}

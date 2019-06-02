@@ -4,9 +4,10 @@ public class Doctor extends MedicalEmployees {
 	String specialty;
 
 
-	public Doctor(String firstName, int payRate, String employeeNum, boolean hasBeenPayed, String specialty) {
-		super(firstName, payRate, employeeNum, hasBeenPayed);
+	public Doctor(String firstName,  String employeeNum, boolean hasBeenPayed, String specialty) {
+		super(firstName, employeeNum, hasBeenPayed);
 		this.specialty = specialty;
+		makePayRate();
 	}
 
 	@Override
@@ -20,6 +21,7 @@ public class Doctor extends MedicalEmployees {
 
 	@Override
 	public void payOutSalary() {
+		makePayRate();
 		if(hasBeenPayed == false) {;
 		System.out.println("Doctor " + firstName + " has been paid " + getPayRate());
 		payEmployee();

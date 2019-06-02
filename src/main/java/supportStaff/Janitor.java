@@ -5,9 +5,10 @@ public class Janitor extends SupportStaff {
 
 
 	
-	public Janitor(String firstName, int payRate, String employeeNum, boolean hasBeenPayed, boolean isSweeping) {
-		super(firstName, payRate, employeeNum, hasBeenPayed);
+	public Janitor(String firstName, String employeeNum, boolean hasBeenPayed, boolean isSweeping) {
+		super(firstName, employeeNum, hasBeenPayed);
 		this.isSweeping = isSweeping;
+		makePayRate();
 	}
 	public boolean getSweeping() {
 		
@@ -20,6 +21,7 @@ public class Janitor extends SupportStaff {
 	}
 	@Override
 	public void payOutSalary() {
+		makePayRate();
 		if(hasBeenPayed == false) {;
 		System.out.println("Janitor " + firstName + " has been paid " + getPayRate());
 		payEmployee();

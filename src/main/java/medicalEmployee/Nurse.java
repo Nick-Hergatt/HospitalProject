@@ -2,11 +2,12 @@ package medicalEmployee;
 
 public class Nurse extends MedicalEmployees {
 	int patients;
-
 	
-	public Nurse(String firstName, int payRate, String employeeNum, boolean hasBeenPayed, int patients) {
-		super(firstName, payRate, employeeNum, hasBeenPayed);
+	
+	public Nurse(String firstName, String employeeNum, boolean hasBeenPayed, int patients) {
+		super(firstName, employeeNum, hasBeenPayed);
 		this.patients = patients;
+		makePayRate();
 	}
 
 	@Override
@@ -20,6 +21,7 @@ public class Nurse extends MedicalEmployees {
 
 	@Override
 	public void payOutSalary() {
+		makePayRate();
 		if(hasBeenPayed == false) {;
 		System.out.println("Nurse " + firstName + " has been paid " + getPayRate());
 		payEmployee();
