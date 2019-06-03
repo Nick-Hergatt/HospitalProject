@@ -8,30 +8,30 @@ import org.junit.Test;
 public class ReceptionistTest {
 
 	@Test
-	public void JanitorShouldBeSweepingByDefualt() {
+	public void ReceptionistShouldBeBeOnPhoneByDefualt() {
 		Receptionist underTest = new Receptionist(null, null, true, true);
-		boolean isSweeping = underTest.getIsOnThePhone();
-		assertEquals(true, isSweeping);
+		boolean isOnPhone = underTest.getIsOnThePhone();
+		assertEquals(true, isOnPhone);
 	}
 
 	@Test
-	public void JanitorGregShouldNotBeSweeping() {
+	public void ReceptionistShouldNotBeOnPhone() {
 		Receptionist underTest = new Receptionist(null, null, false, false);
-		boolean isSweeping = underTest.getIsOnThePhone();
-		assertEquals(false, isSweeping);
+		boolean isOnPhone = underTest.getIsOnThePhone();
+		assertEquals(false, isOnPhone);
 	}
 
 	@Test
-	public void JanitorGregShouldNotBeSweepingTomShouldBeSweeping() {
+	public void ReceptionistGregShouldNotBeOnPhoneTomShouldBeOnPhone() {
 		Receptionist underTest1 = new Receptionist(null, null, true, true);
 		Receptionist underTest2 = new Receptionist(null, null, false, false);
-		boolean isSweeping1 = underTest1.getIsOnThePhone();
-		boolean isSweeping2 = underTest2.getIsOnThePhone();
-		assertEquals(true, isSweeping1);
-		assertEquals(false, isSweeping2);
+		boolean isOnPhone1 = underTest1.getIsOnThePhone();
+		boolean isOnPhone2 = underTest2.getIsOnThePhone();
+		assertEquals(true, isOnPhone1);
+		assertEquals(false, isOnPhone2);
 	}
 	@Test
-	public void DoctorJohnShouldBePaid() {
+	public void ReceptionistShouldBePaid() {
 		Receptionist underTest = new Receptionist(null, null, true, true);
 		boolean payTest = underTest.getHasBeenPayed();
 		assertThat(payTest, is(true));
