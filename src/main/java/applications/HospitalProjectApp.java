@@ -8,6 +8,7 @@ import models.HospitalEmployee;
 import models.HospitalStaffList;
 import models.PatientsRegister;
 import patient.Patient;
+import supportStaff.EmergencyResponderJenny;
 import supportStaff.Janitor;
 import supportStaff.Receptionist;
 
@@ -24,6 +25,7 @@ public static void main(String[] args) {
     ourStaff.addEmployeeToStaff(new Nurse("Frank Reynolds", "1102", false, 5));
     ourStaff.addEmployeeToStaff(new Janitor("Bob", "1103", false, false));
     ourStaff.addEmployeeToStaff(new Receptionist("Tim Johnson", "1104", false, false));
+    ourStaff.addEmployeeToStaff(new EmergencyResponderJenny("Jenny", "4361", false, false, false));
     ourPatients.addPatientToReg(new Patient("John Doe"));
     ourPatients.addPatientToReg(new Patient("Jane Doe"));
     ourPatients.addPatientToReg(new Patient("Josh Doe"));
@@ -44,6 +46,9 @@ public static void main(String[] args) {
     	ourStaff.janitorStats();
     	System.out.println("\nOur Receptionists");
     	ourStaff.receptionistStats();
+    	System.out.println("\nOur Emergency Responder");
+    	ourStaff.emergencyResponderJennyStats();
+    	System.out.println("");
     	System.out.println();
     	break;
     

@@ -5,6 +5,7 @@ import java.util.Map;
 import medicalEmployee.Doctor;
 import medicalEmployee.Nurse;
 import patient.Patient;
+import supportStaff.EmergencyResponderJenny;
 import supportStaff.Janitor;
 import supportStaff.Receptionist;
 
@@ -60,6 +61,14 @@ public class HospitalStaffList {
 		for (HospitalEmployee janitor : employees.values()) {
 			if (janitor instanceof Janitor)
 				System.out.printf("\n%1$-20s %2$10d %3$15s %4$15b %5$15b\n", janitor.getFirstName(), janitor.getPayRate(), janitor.getEmployeeNum(), janitor.getHasBeenPayed(), ((Janitor) janitor).getSweeping());
+			}
+	}
+	public void emergencyResponderJennyStats() {
+		System.out.println(makeNCharacterStringWithDashes("-", 79));
+		System.out.printf("\n%1$-20s %2$10s %3$15s %4$15s %5$15s %6$15s", "Name", "PayRate", "Employee #", "Pay Status", "On Call", "Out On Run");
+		for (HospitalEmployee emergencyResponderJenny : employees.values()) {
+			if (emergencyResponderJenny instanceof EmergencyResponderJenny)
+				System.out.printf("\n%1$-20s %2$10d %3$15s %4$15b %5$15b %6$15b\n", emergencyResponderJenny.getFirstName(), emergencyResponderJenny.getPayRate(), emergencyResponderJenny.getEmployeeNum(), emergencyResponderJenny.getHasBeenPayed(), ((EmergencyResponderJenny) emergencyResponderJenny).getIsOnThePhone(), ((EmergencyResponderJenny) emergencyResponderJenny).getIsOutOnRun() );
 			}
 	}
 	public String makeNCharacterStringWithDashes(String inputString, int length) {

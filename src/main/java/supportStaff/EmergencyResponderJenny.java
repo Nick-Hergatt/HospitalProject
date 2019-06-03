@@ -1,25 +1,18 @@
 package supportStaff;
 
-public class Receptionist extends SupportStaff {
+public class EmergencyResponderJenny extends Receptionist {
 	public boolean isOnThePhone;
+	public boolean isOutOnRun;
 
-
-
-	public Receptionist(String firstName, String employeeNum, boolean hasBeenPayed, boolean isOnThePhone) {
-		super(firstName, employeeNum, hasBeenPayed);
-		this.isOnThePhone = isOnThePhone;
-		makePayRate();
+	public EmergencyResponderJenny(String firstName, String employeeNum, boolean hasBeenPayed, boolean isOnThePhone, boolean isOutOnRun) {
+		super(firstName, employeeNum, hasBeenPayed, isOnThePhone);
+		this.isOutOnRun = isOutOnRun;
 	}
-
-	@Override
-	public int getPayRate() {
-		return payRate;
+	
+	public boolean getIsOutOnRun() {
+		
+		return isOutOnRun;
 	}
-
-	public boolean getIsOnThePhone() {
-		return isOnThePhone;
-	}
-
 	@Override
 	public void payOutSalary() {
 		makePayRate();

@@ -29,7 +29,7 @@ public class JanitorTest {
 		assertEquals(false, isSweeping2);
 	}
 	@Test
-	public void DoctorJohnShouldBePaid() {
+	public void JanitorGregShouldBePaid() {
 		Janitor underTest = new Janitor(null, null, true, true);
 		boolean payTest = underTest.getHasBeenPayed();
 		assertThat(payTest, is(true));
